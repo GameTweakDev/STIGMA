@@ -1,5 +1,4 @@
 #include "hooks.hpp"
-#include "Cheat.h"
 #include "macros.h"
 #include "../hooks/hooks.h"
 #include "../render/D3D12.h"
@@ -318,11 +317,9 @@ HRESULT __stdcall Hooks::HookPresent(uintptr_t ecx, UINT SyncInterval, UINT Flag
 	{
 		Menu::Toggle();
 	}
+
 	// Render menu
 	Menu::Render();
-
-	// Render the ESP
-	Cheat::InitializeHooks();
 
 	return g_presentOriginal(ecx, SyncInterval, Flags);
 }

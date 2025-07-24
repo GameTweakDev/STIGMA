@@ -2,323 +2,282 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="d3d11_manager.cpp">
-      <Filter>IMGUI\D3D11Manager</Filter>
+      <Filter>Drawing\IMGUI\D3D11Manager</Filter>
     </ClCompile>
     <ClCompile Include="menu.cpp">
-      <Filter>Menu</Filter>
+      <Filter>Drawing\Menu</Filter>
     </ClCompile>
     <ClCompile Include="hooks.cpp">
-      <Filter>RenderHook</Filter>
-    </ClCompile>
-    <ClCompile Include="Unreal\SDK\Basic.cpp">
-      <Filter>Unreal\SDK</Filter>
-    </ClCompile>
-    <ClCompile Include="Unreal\SDK\CoreUObject_functions.cpp">
-      <Filter>Unreal\SDK</Filter>
-    </ClCompile>
-    <ClCompile Include="Unreal\SDK\Engine_functions.cpp">
-      <Filter>Unreal\SDK</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Cheat</Filter>
+      <Filter>Drawing\RenderHook</Filter>
     </ClCompile>
     <ClCompile Include="IMGUI\custom_widgets\custom_widgets.cpp">
-      <Filter>IMGUI</Filter>
+      <Filter>Drawing\IMGUI</Filter>
     </ClCompile>
     <ClCompile Include="kiero.cpp">
-      <Filter>Kiero</Filter>
+      <Filter>Drawing\Kiero</Filter>
     </ClCompile>
     <ClCompile Include="IMGUI\imgui.cpp">
-      <Filter>IMGUI</Filter>
+      <Filter>Drawing\IMGUI</Filter>
     </ClCompile>
     <ClCompile Include="IMGUI\imgui_draw.cpp">
-      <Filter>IMGUI</Filter>
+      <Filter>Drawing\IMGUI</Filter>
     </ClCompile>
     <ClCompile Include="IMGUI\imgui_freetype.cpp">
-      <Filter>IMGUI</Filter>
+      <Filter>Drawing\IMGUI</Filter>
     </ClCompile>
     <ClCompile Include="IMGUI\imgui_impl_dx11.cpp">
-      <Filter>IMGUI</Filter>
+      <Filter>Drawing\IMGUI</Filter>
     </ClCompile>
     <ClCompile Include="IMGUI\imgui_impl_dx12.cpp">
-      <Filter>IMGUI</Filter>
+      <Filter>Drawing\IMGUI</Filter>
     </ClCompile>
     <ClCompile Include="IMGUI\imgui_impl_win32.cpp">
-      <Filter>IMGUI</Filter>
+      <Filter>Drawing\IMGUI</Filter>
     </ClCompile>
     <ClCompile Include="IMGUI\imgui_tables.cpp">
-      <Filter>IMGUI</Filter>
+      <Filter>Drawing\IMGUI</Filter>
     </ClCompile>
     <ClCompile Include="IMGUI\imgui_widgets.cpp">
-      <Filter>IMGUI</Filter>
+      <Filter>Drawing\IMGUI</Filter>
     </ClCompile>
     <ClCompile Include="minhook\src\trampoline.c">
-      <Filter>Kiero</Filter>
+      <Filter>Drawing\Kiero</Filter>
     </ClCompile>
     <ClCompile Include="minhook\src\hde\hde32.c">
-      <Filter>Kiero</Filter>
+      <Filter>Drawing\Kiero</Filter>
     </ClCompile>
     <ClCompile Include="minhook\src\hde\hde64.c">
-      <Filter>Kiero</Filter>
+      <Filter>Drawing\Kiero</Filter>
     </ClCompile>
     <ClCompile Include="minhook\src\hook.c">
-      <Filter>Kiero</Filter>
+      <Filter>Drawing\Kiero</Filter>
     </ClCompile>
     <ClCompile Include="minhook\src\buffer.c">
-      <Filter>Kiero</Filter>
+      <Filter>Drawing\Kiero</Filter>
     </ClCompile>
     <ClCompile Include="GameTweakValidator.cpp">
       <Filter>Auth</Filter>
     </ClCompile>
     <ClCompile Include="d3d12_manager.cpp">
-      <Filter>IMGUI\D3D12Manager</Filter>
+      <Filter>Drawing\IMGUI\D3D12Manager</Filter>
     </ClCompile>
     <ClCompile Include="hooks\Present.cpp">
-      <Filter>DX12 Render Stuff</Filter>
+      <Filter>Drawing\DX12 Render Stuff</Filter>
     </ClCompile>
     <ClCompile Include="hooks\QueryPerformanceCounter.cpp">
-      <Filter>DX12 Render Stuff</Filter>
+      <Filter>Drawing\DX12 Render Stuff</Filter>
     </ClCompile>
     <ClCompile Include="hooks\ResizeBuffers.cpp">
-      <Filter>DX12 Render Stuff</Filter>
+      <Filter>Drawing\DX12 Render Stuff</Filter>
     </ClCompile>
     <ClCompile Include="render\D3d12.cpp">
-      <Filter>DX12 Render Stuff</Filter>
+      <Filter>Drawing\DX12 Render Stuff</Filter>
     </ClCompile>
-    <ClCompile Include="SimpleConfigManager.cpp">
-      <Filter>Cheat</Filter>
-    </ClCompile>
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="AutoConfigManager.cpp">
-      <Filter>Cheat</Filter>
-    </ClCompile>
-    <ClCompile Include="Unreal\SDK\Stigma_functions.cpp">
-      <Filter>Unreal\SDK</Filter>
+      <Filter>Config</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="d3d11_manager.hpp">
-      <Filter>IMGUI\D3D11Manager</Filter>
+      <Filter>Drawing\IMGUI\D3D11Manager</Filter>
     </ClInclude>
     <ClInclude Include="menu.hpp">
-      <Filter>Menu</Filter>
+      <Filter>Drawing\Menu</Filter>
     </ClInclude>
     <ClInclude Include="hooks.hpp">
-      <Filter>RenderHook</Filter>
+      <Filter>Drawing\RenderHook</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\freetype.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\ft2build.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftadvanc.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftbbox.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftbdf.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftbitmap.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftbzip2.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftcache.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftchapters.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftcid.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftcolor.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\config\ftconfig.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftdriver.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\fterrdef.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\fterrors.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftfntfmt.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftgasp.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftglyph.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftgxval.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftgzip.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\config\ftheader.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftimage.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftincrem.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftlcdfil.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftlist.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftlogging.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftlzw.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftmac.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftmm.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftmodapi.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftmoderr.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\config\ftmodule.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\config\ftoption.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftotval.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftoutln.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftparams.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftpfr.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftrender.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftsizes.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftsnames.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\config\ftstdlib.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftstroke.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftsynth.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftsystem.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\fttrigon.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\fttypes.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ftwinfnt.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="IMGUI\imstb_rectpack.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="IMGUI\imstb_textedit.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="IMGUI\imstb_truetype.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\config\integer-types.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\config\mac-support.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\otsvg.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="minhook\src\hde\pstdint.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\config\public-macros.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\t1tables.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="minhook\src\hde\table32.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="minhook\src\hde\table64.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="IMGUI\custom_widgets\textures.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\ttnameid.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\tttables.h">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="freetype\include\freetype\tttags.h">
-      <Filter>IDC</Filter>
-    </ClInclude>
-    <ClInclude Include="Unreal\UnrealContainers.hpp">
-      <Filter>Unreal</Filter>
-    </ClInclude>
-    <ClInclude Include="Unreal\PropertyFixup.hpp">
-      <Filter>Unreal</Filter>
-    </ClInclude>
-    <ClInclude Include="Unreal\SDK.hpp">
-      <Filter>Unreal</Filter>
-    </ClInclude>
-    <ClInclude Include="Unreal\SDK\Basic.hpp">
-      <Filter>Unreal\SDK</Filter>
+      <Filter>Drawing\IDC</Filter>
     </ClInclude>
     <ClInclude Include="Cheat.h">
       <Filter>Cheat</Filter>
     </ClInclude>
-    <ClInclude Include="ZeroGUI.h">
-      <Filter>Cheat</Filter>
-    </ClInclude>
-    <ClInclude Include="Settings.h">
-      <Filter>Cheat</Filter>
-    </ClInclude>
-    <ClInclude Include="bones.h">
-      <Filter>Cheat</Filter>
-    </ClInclude>
-    <ClInclude Include="ESP.h">
-      <Filter>Cheat</Filter>
-    </ClInclude>
-    <ClInclude Include="GameHooks.h">
+    <ClInclude Include="GameHooks.hpp">
       <Filter>Cheat</Filter>
     </ClInclude>
     <ClInclude Include="Utility.h">
@@ -327,171 +286,174 @@
     <ClInclude Include="Mods.h">
       <Filter>Cheat</Filter>
     </ClInclude>
-    <ClInclude Include="ItemSpawner.h">
-      <Filter>Cheat</Filter>
-    </ClInclude>
     <ClInclude Include="IMGUI\custom_widgets\custom_colors.h">
-      <Filter>IMGUI</Filter>
+      <Filter>Drawing\IMGUI</Filter>
     </ClInclude>
     <ClInclude Include="IMGUI\custom_widgets\custom_settings.h">
-      <Filter>IMGUI</Filter>
+      <Filter>Drawing\IMGUI</Filter>
     </ClInclude>
     <ClInclude Include="IMGUI\custom_widgets\custom_widgets.hpp">
-      <Filter>IMGUI</Filter>
+      <Filter>Drawing\IMGUI</Filter>
     </ClInclude>
     <ClInclude Include="IMGUI\custom_widgets\fonts.h">
-      <Filter>IMGUI</Filter>
+      <Filter>Drawing\IMGUI</Filter>
     </ClInclude>
     <ClInclude Include="kiero.h">
-      <Filter>Kiero</Filter>
+      <Filter>Drawing\Kiero</Filter>
     </ClInclude>
     <ClInclude Include="IMGUI\imconfig.h">
-      <Filter>IMGUI</Filter>
+      <Filter>Drawing\IMGUI</Filter>
     </ClInclude>
     <ClInclude Include="IMGUI\imgui.h">
-      <Filter>IMGUI</Filter>
+      <Filter>Drawing\IMGUI</Filter>
     </ClInclude>
     <ClInclude Include="IMGUI\imgui_freetype.h">
-      <Filter>IMGUI</Filter>
+      <Filter>Drawing\IMGUI</Filter>
     </ClInclude>
     <ClInclude Include="IMGUI\imgui_impl_dx11.h">
-      <Filter>IMGUI</Filter>
+      <Filter>Drawing\IMGUI</Filter>
     </ClInclude>
     <ClInclude Include="IMGUI\imgui_impl_dx12.h">
-      <Filter>IMGUI</Filter>
+      <Filter>Drawing\IMGUI</Filter>
     </ClInclude>
     <ClInclude Include="IMGUI\imgui_impl_win32.h">
-      <Filter>IMGUI</Filter>
+      <Filter>Drawing\IMGUI</Filter>
     </ClInclude>
     <ClInclude Include="IMGUI\imgui_internal.h">
-      <Filter>IMGUI</Filter>
+      <Filter>Drawing\IMGUI</Filter>
     </ClInclude>
     <ClInclude Include="minhook\src\trampoline.h">
-      <Filter>Kiero</Filter>
+      <Filter>Drawing\Kiero</Filter>
     </ClInclude>
     <ClInclude Include="minhook\src\hde\hde32.h">
-      <Filter>Kiero</Filter>
+      <Filter>Drawing\Kiero</Filter>
     </ClInclude>
     <ClInclude Include="minhook\src\hde\hde64.h">
-      <Filter>Kiero</Filter>
+      <Filter>Drawing\Kiero</Filter>
     </ClInclude>
     <ClInclude Include="minhook\src\buffer.h">
-      <Filter>Kiero</Filter>
+      <Filter>Drawing\Kiero</Filter>
     </ClInclude>
     <ClInclude Include="minhook\include\MinHook.h">
-      <Filter>Kiero</Filter>
+      <Filter>Drawing\Kiero</Filter>
     </ClInclude>
     <ClInclude Include="IMGUI\framework.hpp">
-      <Filter>IMGUI</Filter>
+      <Filter>Drawing\IMGUI</Filter>
     </ClInclude>
     <ClInclude Include="GameTweakValidator.hpp">
       <Filter>Auth</Filter>
     </ClInclude>
     <ClInclude Include="d3d12_manager.hpp">
-      <Filter>IMGUI\D3D12Manager</Filter>
+      <Filter>Drawing\IMGUI\D3D12Manager</Filter>
     </ClInclude>
     <ClInclude Include="macros.h">
-      <Filter>RenderHook</Filter>
+      <Filter>Drawing\RenderHook</Filter>
     </ClInclude>
     <ClInclude Include="hooks\hooks.h">
-      <Filter>DX12 Render Stuff</Filter>
+      <Filter>Drawing\DX12 Render Stuff</Filter>
     </ClInclude>
     <ClInclude Include="mem\address.h">
-      <Filter>DX12 Render Stuff</Filter>
+      <Filter>Drawing\DX12 Render Stuff</Filter>
     </ClInclude>
     <ClInclude Include="mem\mem.h">
-      <Filter>DX12 Render Stuff</Filter>
+      <Filter>Drawing\DX12 Render Stuff</Filter>
     </ClInclude>
     <ClInclude Include="mem\module.h">
-      <Filter>DX12 Render Stuff</Filter>
+      <Filter>Drawing\DX12 Render Stuff</Filter>
     </ClInclude>
     <ClInclude Include="mem\pattern.h">
-      <Filter>DX12 Render Stuff</Filter>
+      <Filter>Drawing\DX12 Render Stuff</Filter>
     </ClInclude>
     <ClInclude Include="mem\range.h">
-      <Filter>DX12 Render Stuff</Filter>
+      <Filter>Drawing\DX12 Render Stuff</Filter>
     </ClInclude>
     <ClInclude Include="render\D3D12.h">
-      <Filter>DX12 Render Stuff</Filter>
+      <Filter>Drawing\DX12 Render Stuff</Filter>
     </ClInclude>
     <ClInclude Include="render\Nuklear\nuklear_d3d12.h">
-      <Filter>DX12 Render Stuff</Filter>
+      <Filter>Drawing\DX12 Render Stuff</Filter>
     </ClInclude>
     <ClInclude Include="render\Nuklear\nuklear_d3d12_pixel_shader.h">
-      <Filter>DX12 Render Stuff</Filter>
+      <Filter>Drawing\DX12 Render Stuff</Filter>
     </ClInclude>
     <ClInclude Include="render\Nuklear\nuklear_d3d12_vertex_shader.h">
-      <Filter>DX12 Render Stuff</Filter>
-    </ClInclude>
-    <ClInclude Include="Aimbot.h">
-      <Filter>Cheat</Filter>
-    </ClInclude>
-    <ClInclude Include="SimpleConfigManager.h">
-      <Filter>Cheat</Filter>
-    </ClInclude>
-    <ClInclude Include="AutoConfigManager.h">
-      <Filter>Cheat</Filter>
+      <Filter>Drawing\DX12 Render Stuff</Filter>
     </ClInclude>
     <ClInclude Include="include\boost\pfr.hpp">
-      <Filter>IDC</Filter>
+      <Filter>Drawing\IDC</Filter>
+    </ClInclude>
+    <ClInclude Include="IL2CPP\Functions.hpp">
+      <Filter>IL2CPP</Filter>
+    </ClInclude>
+    <ClInclude Include="IL2CPP\il2cpp.h">
+      <Filter>IL2CPP</Filter>
+    </ClInclude>
+    <ClInclude Include="AutoConfigManager.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="LabelHelper.hpp">
+      <Filter>IL2CPP</Filter>
+    </ClInclude>
+    <ClInclude Include="ESP.hpp">
+      <Filter>Cheat</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\misc\debuggers\imgui.natvis">
-      <Filter>IMGUI</Filter>
+      <Filter>Drawing\IMGUI</Filter>
     </None>
     <None Include="..\..\misc\debuggers\imgui.natstepfilter">
-      <Filter>IMGUI</Filter>
-    </None>
-    <None Include="Unreal\NameCollisions.inl">
-      <Filter>Unreal</Filter>
+      <Filter>Drawing\IMGUI</Filter>
     </None>
     <None Include="IMGUI\imgui.ini">
-      <Filter>IMGUI</Filter>
+      <Filter>Drawing\IMGUI</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Filter Include="IMGUI">
-      <UniqueIdentifier>{0e957782-98e8-4ce4-87fa-c74a4d426965}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Kiero">
-      <UniqueIdentifier>{64a14aff-1ddd-4a83-9c2e-3bc9c06af069}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Kiero\MinHook">
-      <UniqueIdentifier>{85b42ffd-0f81-48b4-b175-b25d5c7e3646}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Widget_Settings">
-      <UniqueIdentifier>{491c6917-41ea-4c1a-b13f-403cf67b4c9e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Menu">
-      <UniqueIdentifier>{a2a8af8c-681e-4368-8792-9034ea510527}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="RenderHook">
-      <UniqueIdentifier>{de28b5ee-3353-497a-8759-4723649fd15b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="IDC">
-      <UniqueIdentifier>{1c9ab4cf-264c-4a51-9cfa-1aa9511bc52f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Unreal">
-      <UniqueIdentifier>{4188a7af-7ada-4b48-8159-5b5411831d71}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Unreal\SDK">
-      <UniqueIdentifier>{f99073ed-e6d4-49e5-8381-0996810b6ad4}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Cheat">
       <UniqueIdentifier>{c529fb4e-e184-4f47-8212-d3a6a41f9e5b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="IMGUI\D3D11Manager">
-      <UniqueIdentifier>{fcb52d68-b6f0-41c2-b261-47e3dfec4a0b}</UniqueIdentifier>
     </Filter>
     <Filter Include="Auth">
       <UniqueIdentifier>{dff25929-e9e8-4f71-9a2f-654869754d6d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="IMGUI\D3D12Manager">
+    <Filter Include="IL2CPP">
+      <UniqueIdentifier>{aff82c4f-13e9-494e-af1d-7c92ad701c10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Drawing">
+      <UniqueIdentifier>{2daa5498-d488-414d-9743-3e2f08d36d90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Drawing\RenderHook">
+      <UniqueIdentifier>{de28b5ee-3353-497a-8759-4723649fd15b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Drawing\IMGUI">
+      <UniqueIdentifier>{0e957782-98e8-4ce4-87fa-c74a4d426965}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Drawing\IMGUI\D3D11Manager">
+      <UniqueIdentifier>{fcb52d68-b6f0-41c2-b261-47e3dfec4a0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Drawing\IMGUI\D3D12Manager">
       <UniqueIdentifier>{7ac1925e-dabc-4f49-8d23-82ef79b32bef}</UniqueIdentifier>
     </Filter>
-    <Filter Include="DX12 Render Stuff">
+    <Filter Include="Drawing\Kiero">
+      <UniqueIdentifier>{64a14aff-1ddd-4a83-9c2e-3bc9c06af069}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Drawing\Kiero\MinHook">
+      <UniqueIdentifier>{85b42ffd-0f81-48b4-b175-b25d5c7e3646}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Drawing\Menu">
+      <UniqueIdentifier>{a2a8af8c-681e-4368-8792-9034ea510527}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Drawing\DX12 Render Stuff">
       <UniqueIdentifier>{a15f926b-0734-45e2-bb07-82ef6dd9cf44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Drawing\IDC">
+      <UniqueIdentifier>{1c9ab4cf-264c-4a51-9cfa-1aa9511bc52f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config">
+      <UniqueIdentifier>{39237bcf-ad28-454c-a1de-6cdb4871c7e9}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
