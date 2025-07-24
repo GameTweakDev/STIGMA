@@ -2,7 +2,6 @@
 #include <d3d11.h>
 #include <string>
 #include <vector>
-#include "../../Settings.h"
 
 class c_settings
 {
@@ -50,7 +49,7 @@ public:
 	std::vector<const char*> selection_labels = { "Aim","Player ESP", "Item ESP", "Local Player", "Exploits", "Config", "Debug" };
 	std::vector<const char*> sub_selection = { "Thread", "Enemy", "Other", "Team" };
 
-	std::vector<std::string> watermark_list = { "GameTweak", WaterMarkTitle, "v0.1" };
+	std::vector<std::string> watermark_list = { "GameTweak", "Rematch", "v0.1" };
 
 	ImVec2 child_spacing = ImVec2(18, 10);
 

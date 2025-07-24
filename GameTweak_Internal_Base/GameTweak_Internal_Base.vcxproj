@@ -85,7 +85,7 @@
     <IntDir>$(ProjectDir)$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <OutDir>$(USERPROFILE)\Documents\GitHub\Builds\</OutDir>
+    <OutDir>$(ProjectDir)$(Configuration)\</OutDir>
     <IntDir>$(ProjectDir)$(Configuration)\</IntDir>
     <IncludePath>$(ProjectDir)Include;$(ProjectDir)IMGUI;$(ProjectDir)IMGUI\custom_widgets;$(ProjectDir)IMGUI\freetype\include</IncludePath>
     <LibraryPath>$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64);$(ProjectDir)IMGUI;$(ProjectDir)IMGUI\freetype\win64</LibraryPath>
@@ -169,11 +169,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Aimbot.h" />
     <ClInclude Include="AutoConfigManager.h" />
+    <ClInclude Include="bones.h" />
     <ClInclude Include="Cheat.h" />
     <ClInclude Include="d3d11_manager.hpp" />
     <ClInclude Include="d3d12_manager.hpp" />
-    <ClInclude Include="ESP.hpp" />
+    <ClInclude Include="ESP.h" />
     <ClInclude Include="freetype\include\freetype\config\ftconfig.h" />
     <ClInclude Include="freetype\include\freetype\config\ftheader.h" />
     <ClInclude Include="freetype\include\freetype\config\ftmodule.h" />
@@ -229,12 +231,10 @@
     <ClInclude Include="freetype\include\freetype\tttables.h" />
     <ClInclude Include="freetype\include\freetype\tttags.h" />
     <ClInclude Include="freetype\include\ft2build.h" />
-    <ClInclude Include="GameHooks.hpp" />
+    <ClInclude Include="GameHooks.h" />
     <ClInclude Include="GameTweakValidator.hpp" />
     <ClInclude Include="hooks.hpp" />
     <ClInclude Include="hooks\hooks.h" />
-    <ClInclude Include="IL2CPP\Functions.hpp" />
-    <ClInclude Include="IL2CPP\il2cpp.h" />
     <ClInclude Include="IMGUI\custom_widgets\custom_colors.h" />
     <ClInclude Include="IMGUI\custom_widgets\custom_settings.h" />
     <ClInclude Include="IMGUI\custom_widgets\custom_widgets.hpp" />
@@ -252,8 +252,8 @@
     <ClInclude Include="IMGUI\imstb_textedit.h" />
     <ClInclude Include="IMGUI\imstb_truetype.h" />
     <ClInclude Include="include\boost\pfr.hpp" />
+    <ClInclude Include="ItemSpawner.h" />
     <ClInclude Include="kiero.h" />
-    <ClInclude Include="LabelHelper.hpp" />
     <ClInclude Include="macros.h" />
     <ClInclude Include="mem\address.h" />
     <ClInclude Include="mem\mem.h" />
@@ -275,7 +275,13 @@
     <ClInclude Include="render\Nuklear\nuklear_d3d12_pixel_shader.h" />
     <ClInclude Include="render\Nuklear\nuklear_d3d12_vertex_shader.h" />
     <ClInclude Include="Settings.h" />
+    <ClInclude Include="SimpleConfigManager.h" />
+    <ClInclude Include="Unreal\PropertyFixup.hpp" />
+    <ClInclude Include="Unreal\SDK.hpp" />
+    <ClInclude Include="Unreal\SDK\Basic.hpp" />
+    <ClInclude Include="Unreal\UnrealContainers.hpp" />
     <ClInclude Include="Utility.h" />
+    <ClInclude Include="ZeroGUI.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutoConfigManager.cpp" />
@@ -304,11 +310,17 @@
     <ClCompile Include="minhook\src\hook.c" />
     <ClCompile Include="minhook\src\trampoline.c" />
     <ClCompile Include="render\D3d12.cpp" />
+    <ClCompile Include="SimpleConfigManager.cpp" />
+    <ClCompile Include="Unreal\SDK\Basic.cpp" />
+    <ClCompile Include="Unreal\SDK\CoreUObject_functions.cpp" />
+    <ClCompile Include="Unreal\SDK\Engine_functions.cpp" />
+    <ClCompile Include="Unreal\SDK\Stigma_functions.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\misc\debuggers\imgui.natstepfilter" />
     <None Include="..\..\misc\debuggers\imgui.natvis" />
     <None Include="IMGUI\imgui.ini" />
+    <None Include="Unreal\NameCollisions.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

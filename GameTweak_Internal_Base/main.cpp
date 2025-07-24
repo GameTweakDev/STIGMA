@@ -5,8 +5,6 @@
 #include "GameTweakValidator.hpp"
 #include <string>
 #include <sstream>
-#include "IL2CPP/Functions.hpp"
-#include "Cheat.h"
 
 #if Enable_Auth
 
@@ -111,12 +109,8 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD reason, LPVOID lpReserved)
             Sleep(100);
         }
         while (true);
-
-        // Hook Game Function
-        Cheat::InitializeHooks();
-
         break;
-        
+
         case DLL_PROCESS_DETACH:
         Menu::Shutdown();
         Hooks::Shutdown();

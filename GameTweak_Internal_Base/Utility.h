@@ -2,7 +2,10 @@
 #define UTILITY_H
 
 #include "Settings.h"
+#include "ZeroGUI.h"
 #include "framework.hpp"
+#include "bones.h"
+#include "Unreal/SDK/Engine_parameters.hpp"
 #include <filesystem>
 #include <fstream>
 #include <cstdarg>
@@ -10,9 +13,107 @@
 #include <vector>
 #include <algorithm>
 
+/**
+ * @class Utility
+ * @brief Central utility class providing common functions for logging, formatting, and game-specific operations
+ *
+ * This class contains static utility functions used throughout the cheat system including:
+ * - Color creation helpers
+ * - String cleaning and formatting
+ * - Logging functionality
+ * - Console enabling
+ * - Function pointer management
+ */
 class Utility
 {
 public:
+    // ============================================================================
+    // STATIC VARIABLES - Hook management
+    // ============================================================================
+
+    /// Original PostRender function pointer for hook restoration
+    inline static uintptr_t PostRenderOG = 0;
+
+    /// Original ProcessEvent function pointer for hook restoration  
+    inline static uintptr_t ProcessEventOG = 0;
+
+    // ============================================================================
+    // COLOR UTILITIES
+    // ============================================================================
+
+    /**
+     * @brief Creates an FLinearColor from a 4-element float array
+     * @param color Array containing RGBA values [0.0f - 1.0f]
+     * @return SDK::FLinearColor object for rendering
+     *
+     * Eliminates repetitive FLinearColor constructor calls throughout the codebase
+     */
+    static SDK::FLinearColor CreateColor(const float color[4])
+    {
+        return SDK::FLinearColor(color[0], color[1], color[2], color[3]);
+    }
+
+    // ============================================================================
+    // STRING UTILITIES
+    // ============================================================================
+    /**
+     * @brief Cleans game object names by removing common prefixes, suffixes, and numeric identifiers
+     * @param Input Raw object name from the game engine
+     * @return Cleaned, human-readable string
+     *
+     * Removes:
+     * - Numeric suffixes (e.g., "_123")
+     * - "_C" suffix (Unreal class indicator)
+     * - Common prefixes: "WF_", "BR_", "Key_", "ValuableItem_B_", "ValuableItem_"
+     *
+     * Example: "ValuableItem_B_HardDrive_C_123" -> "HardDrive"
+     */
+    static std::string CleanName(const std::string& input)
+    {
+        if (input.empty()) return input;
+        std::string Result = input; // Start with the original input string
+        // Remove numeric suffix after the last '_'
+        size_t pos = Result.find_last_of('_');
+        if (pos != std::string::npos && pos + 1 < Result.size()) // Ensure there's something after '_'
+        {
+            std::string Suffix = Result.substr(pos + 1); // Get the part after '_'
+            if (std::all_of(Suffix.begin(), Suffix.end(), ::isdigit)) // Check if all characters in Suffix are digits
+            {
+                Result = Result.substr(0, pos); // Remove the numeric suffix
+            }
+        }
+        // Remove "_C" at the end of the string if present
+        if (Result.size() >= 2 && Result.substr(Result.size() - 2) == "_C")
+        {
+            Result = Result.substr(0, Result.size() - 2); // Remove "_C"
+        }        
+        // Remove "WF_" at the start of the string if present
+        if (Result.size() >= 3 && Result.substr(0, 3) == "WF_")
+        {
+            Result = Result.substr(3); // Remove "WF_"
+        }
+        // Remove "BR_" at the start of the string if present
+        if (Result.size() >= 3 && Result.substr(0, 3) == "BR_")
+        {
+            Result = Result.substr(3); // Remove "BR_"
+        }
+        // Remove "Key_" at the start of the string if present
+        if (Result.size() >= 4 && Result.substr(0, 4) == "Key_")
+        {
+            Result = Result.substr(4); // Remove "Key_"
+        }
+        // Remove "ValuableItem_B_" at the start of the string if present
+        if (Result.size() >= 14 && Result.substr(0, 14) == "ValuableItem_B_")
+        {
+            Result = Result.substr(14); // Remove "ValuableItem_B_"
+        }
+        // Remove "ValuableItem_" at the start of the string if present
+        if (Result.size() >= 12 && Result.substr(0, 12) == "ValuableItem_")
+        {
+            Result = Result.substr(12); // Remove "ValuableItem_"
+        }
+        return Result; // Return the fully cleaned string
+    }
 
     // ============================================================================
     // LOGGING UTILITIES
@@ -130,6 +231,79 @@ public:
         __int64 func_address = address;
         T(*func)(...) = (T(*)(...))func_address;
         return func;
+    }
+
+    // ============================================================================
+    // GAME-SPECIFIC UTILITIES
+    // ============================================================================
+
+    /**
+     * @brief Enables the Unreal Engine developer console
+     * @return void
+     *
+     * Features:
+     * - Sets console key to F2
+     * - Creates console object in game viewport
+     * - Links console to local player
+     * - Comprehensive null checking for stability
+     *
+     * This function modifies DefaultObject properties which is generally
+     * discouraged but necessary for console key binding in UE4.
+     */
+    static void EnableConsole()
+    {
+        // Get engine and world instances
+        SDK::UEngine* Engine = SDK::UEngine::GetEngine();
+        SDK::UWorld* World = SDK::UWorld::GetWorld();
+
+        // Comprehensive validation chain to prevent crashes
+        if (!Engine || !World || !World->OwningGameInstance)
+        {
+            return;
+        }
+
+        // Validate local players array
+        if (World->OwningGameInstance->LocalPlayers.Num() <= 0)
+        {
+            return;
+        }
+
+        // Validate player controller
+        SDK::ULocalPlayer* localPlayer = World->OwningGameInstance->LocalPlayers[0];
+        if (!localPlayer || !localPlayer->PlayerController)
+        {
+            return;
+        }
+
+        // Set console activation key to F2
+        // Note: This modifies a DefaultObject, which is generally unsafe
+        // but required for console key binding in UE4
+        if (SDK::UInputSettings* inputSettings = SDK::UInputSettings::GetDefaultObj())
+        {
+            inputSettings->ConsoleKeys[0].KeyName =
+                SDK::UKismetStringLibrary::Conv_StringToName(L"F2");
+        }
+
+        // Create console object
+        if (!Engine->GameViewport || !Engine->ConsoleClass)
+        {
+            return;
+        }
+
+        SDK::UObject* consoleObject = SDK::UGameplayStatics::SpawnObject(
+            Engine->ConsoleClass, Engine->GameViewport);
+
+        if (!consoleObject)
+        {
+            return;
+        }
+
+        // Assign console to viewport (safe cast as SpawnObject guarantees type)
+        auto* console = static_cast<SDK::UConsole*>(consoleObject);
+        Engine->GameViewport->ViewportConsole = console;
+
+        // Link console to local player for proper functionality
+        console->ConsoleTargetPlayer = localPlayer;
     }
 };
 
